@@ -20,6 +20,7 @@ class CreateEmployeeTable extends Migration
             $table->string('mail',128)->nullable(false)->unique;
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
+            $table->unique('mail');
         });
     }
 
