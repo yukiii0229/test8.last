@@ -16,7 +16,7 @@ class CreateLoginTable extends Migration
         Schema::create('_login', function (Blueprint $table) {
             $table->string('sesstion',64);
             $table->bigIncrements('users_id');
-            $table->timestamp('expiration')->nullable(false);
+            $table->timestamp('expiration')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
             $table->foreign('user_id')->references('user_id')->on('employee');
