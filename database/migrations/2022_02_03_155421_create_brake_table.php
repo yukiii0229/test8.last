@@ -17,7 +17,7 @@ class CreateBrakeTable extends Migration
             $table->date('date');
             $table->bigIncrements('users_id');
             $table->integer('number');
-            $table->timestamp('brake_in')->nullable(false);
+            $table->timestamp('brake_in')->nullable();
             $table->timestamp('brake_out');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
